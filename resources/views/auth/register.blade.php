@@ -29,7 +29,8 @@
                     <div class="form-group">
                         <button class="btn btn-block btn-primary" type="submit">Register</button>
                     </div>
-
+                    <br>
+                    <a href="{{ route('auth.login') }}">Login Page!</a>
                 </form>
             </div>
         </div>
