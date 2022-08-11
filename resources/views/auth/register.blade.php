@@ -13,7 +13,6 @@
                 @extends('layouts.errors.message')
                 <form action="{{ route('auth.register.store') }}" method="POST">
                     @csrf
-                    @method('post')
                     <div class="form-group">
                         <label for="name">Full name</label>
                         <input type="text" class="form-control" name="name" placeholder="Enter your Full Name . . ."
