@@ -33,7 +33,7 @@ class AuthController extends Controller
             $data = User::find(session('loginId'));
             return view('home', compact('data'));
         }
-        return redirect('auth.login');
+        return redirect('auth/login');
     }
 
     public function register()
@@ -50,5 +50,13 @@ class AuthController extends Controller
             return back()->with('success', 'You have registerd!');
         }
         return back()->with('failed', 'Something is wrong, try again!');
+    }
+
+    public function logout()
+    {
+        if (FacadesSession::has('loginId')) {
+            FacadesSession::flush('loginId');
+            return redirect('auth/login');
+        }
     }
 }

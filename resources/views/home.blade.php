@@ -15,7 +15,7 @@
                         <tr>
                             <td>{{ $data->name }}</td>
                             <td>{{ $data->email }}</td>
-                            <td><a href="">Logout</a></td>
+                            <td><a href="{{ route('auth.logout') }}">Logout</a></td>
                         </tr>
                     </tbody>
                 </table>

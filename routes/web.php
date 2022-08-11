@@ -9,6 +9,8 @@ Route::prefix('auth')->group(function () {
 
     Route::get('register', [AuthController::class, 'register'])->name('auth.register');
     Route::post('register', [AuthController::class, 'storeUser'])->name('auth.register.store');
+
+    Route::get('logout', [AuthController::class, 'logout'])->name('auth.logout');
 });
 
 Route::get('home', [AuthController::class, 'home'])->name('home');
